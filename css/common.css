@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+
+/* 이하 모달 */
+.mo1,.mo2,.mo3,
+.mo4,.mo5,.mo6,.mo7
+{
+	display: none;
+	z-index: 5000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.xbtn {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	background: transparent;
+	border: 0;
+	color: #ffffff;
+	font-size: 3rem;
+     cursor:pointer;
+}
+
+.Box {
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	height: 30%;
+	text-align: center;
+}
+
+.Box img {
+	width: 100%;
+}
+.sub2 a{cursor:pointer;}
+
+/* 모달 끝 */
+
+
+
+
+
+body{background-color: rgb(0, 0, 0);}
+
+header{
+     background-color: rgb(0, 0, 0);
+     width: 100%;
+     height: 100px;
+     border-bottom: 1px solid #ffcb00;
+     box-sizing: border-box;
+     font-family: 'Nanum Myeongjo', serif;
+     position: relative;
+     top:0;
+     left:0;
+}
+
+
+header > .wrap{
+     margin: 0 auto;
+     width: 100%;
+     display: inline-block;
+}
+/* 다 펼쳐졌을때 */
+header > .wrap .wrap_in{
+     margin: 0 auto;
+     width: 62.5%; 
+}
+
+header nav ul.gnb{
+     display: inline-block;
+     width: 100%;
+     text-align: center;
+}
+header .gnb img{
+     width: 110px;
+     transition: 0.5s;
+}
+/*  logo img end*/
+
+
+/* 스크립트로 스크롤 고정 */
+header.fixed{
+     width: 100%;
+     position: fixed;
+     top:0;
+     left:0;
+     height: 100px;
+     z-index: 500;
+}
+
+header.fixed .centerlogo{
+width: 88px;
+transition: 0.5s;
+}
+/* 스크립트로 스크롤 고정끝 */
+/* 이하 gnb 폰트 */
+/* 첫번째 li 즉, 1차메뉴와 이하 2차메뉴에게 탑으로 정렬 */
+header .sm_txt{
+     font-size: 1.2rem;
+}
+header nav .gnb > li{
+     display: inline-block;
+     vertical-align: top;
+     height: 100px;
+     line-height: 100px;
+     width: 15%;
+     position: relative;
+     z-index: 500;
+     
+}
+/* lyric main에서 안보여서 z-index500줌 */
+
+/* 이하 2차메뉴(가려둠) */
+/* 가사/멤버로 나눠서 길이 맞추는 용도 */
+header nav ul.sub1,
+header nav ul.sub2{
+     padding-top: 25px;
+     background-color: rgba(10, 10, 10, 0.404);
+     width: 100%;
+     margin: 0 auto;
+     box-sizing: border-box;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1) inset;  
+     border-radius: 0 0 10px 10px;
+     display: none;
+}
+
+
+header nav ul.gnb a{
+     font-size: 1.8rem;
+     color:#ffcb00;
+     display: inline-block;
+     font-weight: 700;
+     transition: ease-in-out 0.2s;
+     
+     
+}
+header nav ul.gnb a:hover{
+     color:#ffe600;
+     transition: ease-in-out 0.2s;
+}
+header nav .sub1 > li,
+header nav .sub2 > li{
+     height:60px;
+     line-height: 25px;
+}
+header nav .sub1 li:last-child,
+header nav .sub2 li:last-child{
+     height: 60px;
+     line-height: 25px;
+}
+header nav .sub2 li:last-child{
+     height: 50px;
+     
+}
+header nav .sub1 li:last-child{
+     height:75px;
+}
+
+header nav ul.sub1 a,
+header nav ul.sub2 a{
+     font-size: 1.6rem;
+     color: #fff;
+     font-weight: 600;
+     transition: ease-in-out 0.2s;
+     position: relative;
+}
+
+/* 이하 2차메뉴 호버시 효과들*/
+header nav ul.sub1 a:hover,
+header nav ul.sub2 a:hover{
+     color: #ffcb00;
+     transition: ease-in-out 0.2s;
+}
+header nav ul.sub1 a:hover::after,
+header nav ul.sub2 a:hover::after{
+     width: 100%;
+     left: 0;
+     right: auto;
+}
+header nav ul.sub1 a::after,
+header nav ul.sub2 a::after{
+     position: absolute;
+     content: '';
+     display: block;
+     border-bottom: solid 1px #ffcb00;  
+     transition: 250ms ease-out;
+     left: auto;
+     right: 0;
+     width: 0;
+}
+
+/* 홈 외의 page에서 2차 메뉴윗공간 생겨서 추가함 */
+
+header nav ul.gnb a:first-child{
+     margin-top: -3px;
+}
+
+/* 2차메뉴 end */
+
+
+
+
+footer{
+     background-color: #000;
+     width: 100%;
+     height: 170px;
+}
+footer > .wrap{
+     margin: 0 auto;
+     text-align: center;
+     color: #707070;
+     font-size: 1.4rem;
+}
+footer > .wrap ul{
+     margin-top: 50px;
+     line-height: 2.4rem;
+     font-size: 1.6rem;
+}
+footer > .wrap ul img{
+     padding-bottom: 10px;
+}
+footer > .wrap ul li:last-child{
+     font-size: 1.2rem;
+}
+footer > .wrap ul li:nth-child(2){
+     font-weight: 500;
+}
+
+/* 위로가기 */
+.up{
+     position: fixed;
+	bottom: 0;
+	right: 0;
+     display: inline-block;
+	text-align: center;
+     z-index: 5000;
+}
+.up a{
+     box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+     position: absolute;
+     z-index: 5000;
+     bottom: 30px;
+	right: 30px;
+     width: 50px;
+     height: 50px;
+     background-color: rgba(82, 81, 81, 0.589);
+     border-radius: 50%;
+     
+}
+.up img{
+     position: absolute;
+     width: 60%;
+     height: 60%;
+     display: inline-block;
+     transform:rotateZ(-90deg);
+     left: 20%;
+     top:18%;
+}

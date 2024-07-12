@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+p {
+     color: #333;
+     font-weight: 700;
+}
+
+span.title {
+     color: #833E6E;
+}
+
+.yt div iframe {
+     border: 1px solid #833E6E;
+}
+
+article {
+     background-color: #fff;
+}
+span.info::before{
+     background-color: #833E6E;
+}

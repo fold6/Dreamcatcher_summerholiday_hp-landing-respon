@@ -1,0 +1,529 @@
+@charset "utf-8";
+
+
+
+
+main{
+     background-color: rgb(54, 54, 54);
+     width: 100%;
+     height: 1080px;
+     text-align: center;
+     position: relative;
+     z-index: -5;
+     margin-bottom: 150px;
+}
+.main_vid video{
+     object-fit: cover;
+     width: 100%;
+     height: 1080px;
+}
+
+main::before{
+     content: '';
+     width:100%;
+     height: 100%;
+     background-color:rgba(0, 0, 0, 0.3);
+     position: absolute;
+     left: 0;
+     top: 0;
+}
+/* 검은필터 */     
+/* main end */
+
+
+
+/* 이하 시멘틱 버튼 기준 */
+
+section .ly{
+     width: 100%;
+     height: 855px;
+     box-sizing: border-box;
+     
+}
+.ly_wrap {
+     position: relative;
+     
+}
+section .ly_wrap img{
+     width: 100%;
+     height: 100%;
+     display: inline-block;
+     box-sizing: border-box;
+     border-top: 2px solid #ffcb00;
+     border-bottom: 2px solid #ffcb00;
+}
+
+/*이하 시멘틱 버튼*/
+/* 이하 버튼위치 조정 */
+/* 이미지폼마다 높이가 달라서 각각줘야함,기준은 같음*/
+
+.as1 .ui.animated.button,
+.as2 .ui.animated.button,
+.as3 .ui.animated.button,
+.as4 .ui.animated.button,
+.as5 .ui.animated.button
+{
+     position: absolute;
+     overflow: hidden;
+     padding-right: 0em ;
+     z-index: 100;
+     top: 64%;
+     left: 10.79%;
+     font-size: 1.6rem;
+     font-weight: 800;
+     
+}
+/* 비커즈 및 전체값 */
+.as2 .ui.animated.button{
+     top: 64%;
+     left: 19.87%; 
+}
+.as3 .ui.animated.button{
+     top: 59.2%;
+     left: 28.98%; 
+}
+.as4 .ui.animated.button{
+     top: 58.4%;
+     left: 38.07%; 
+}
+.as5 .ui.animated.button{
+     top: 59%;
+     left: 47.17%; 
+}
+   
+/* 이하 버튼색 모양조절 */
+/* a1 */
+.as1 > .ui.button,
+.as1 > .ui.button:hover
+{
+     background: #451212;
+}
+.as1 a,
+.as1 a:hover{
+     font-family: 'Nanum Myeongjo', serif;
+     color: #db9600;
+}
+/* a2 */
+.as2 > .ui.button,
+.as2 > .ui.button:hover
+{
+     background: #00a0ff;
+}
+.as2 a,
+.as2 a:hover{
+     font-family: 'Nanum Gothic', sans-serif; 
+     color: rgb(255, 255, 255);
+}
+/* a3 */
+.as3 > .ui.button,
+.as3 > .ui.button:hover
+{
+     background: #097dba;
+}
+.as3 a,
+.as3 a:hover{
+     font-family: 'Nanum Myeongjo', serif;
+     color: #e5e5e5;
+}
+/* a4 */
+.as4 > .ui.button,
+.as4 > .ui.button:hover
+{
+     background: #f6b315;
+}
+.as4 a,
+.as4 a:hover{
+     font-family: 'Nanum Gothic', sans-serif; 
+     color: #ffffff;
+}
+/* a5 */
+.as5 > .ui.button,
+.as5 > .ui.button:hover
+{
+     background: #804f77;
+}
+.as5 a,
+.as5 a:hover{
+     font-family: 'Nanum Myeongjo', serif;
+     color: #fff;
+}
+
+/* 이하 슬릭슬라이드 dots랑 next/prev버튼 */
+.slick-dots{
+     position: absolute;
+     bottom: 5%;
+     display: inline-block;
+     width: 100%;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     text-align: center;
+     z-index: 50; 
+   }
+/* dots 위치 */
+ 
+.slick-dots li button:before {
+     font-family: 'slick';
+     font-size: 12px;
+     line-height: 20px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 20px;
+     height: 20px;
+     content: '•';
+     text-align: center;
+     opacity: .7;
+     color: rgb(255, 255, 255);
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+/* 대기상태일때 */
+.slick-dots li.slick-active button:before {
+     opacity: .7;
+     color: rgb(71, 71, 71);
+ }
+ /* active일때 */
+.slick-prev, .slick-next{
+     z-index: 50;
+     font-size: 0;
+     line-height: 0;
+     position: absolute;
+     top: 50%;
+     display: block;
+     width: 20px;
+     height: 20px;
+     padding: 0;
+     -webkit-transform: translate(0, -50%);
+     -ms-transform: translate(0, -50%);
+     transform: translate(0, -50%);
+     cursor: pointer;
+     color: transparent;
+     border: none;
+     outline: none;
+     background: transparent;
+}
+/* 있어야 left,right btn보임 */
+
+.slick-prev:before, .slick-next:before {
+     font-family: 'slick';
+     font-size: 3rem;
+     line-height: 1;
+     opacity: 1;
+     color: white;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+ /* btn 크기조절 */
+
+ .slick-prev:before {
+     content: url('../img/right.svg') ;
+     display: inline-block;
+     transform:rotateY(180deg);
+ }
+ .slick-next:before {
+     content: url('../img/right.svg') ;
+     display: inline-block;
+ }
+ /* btn 모양 */
+ 
+.slick-prev {
+     left: 10%;
+ }
+ .slick-next{
+      right: 12%;
+ }
+ 
+/* ly end */
+
+
+
+
+
+/* 이하 md 상품 */
+
+section.md{
+     margin: 100px 0;
+     width: 100%;
+     height: 1200px;
+     background: url('../img/md_back.png') center center / cover no-repeat;     
+     display: inline-block;
+     box-sizing: border-box;
+     border-top: 1px solid #ffffff;
+     border-bottom: 1px solid #ffffff;
+}
+.title {
+     text-align: center;
+}
+.title img{
+     margin: 150px 0 60px 0;
+}
+.md > .wrap{
+     margin-top: 20px;
+}
+
+/* 이하 md 상품 각 제품 */
+.md_wrap_top,
+.md_wrap_bot{
+     max-width: 1200px;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap:wrap;
+     width : calc(100%-48px);
+     margin: 0 auto;
+     padding-bottom: 50px;
+}
+
+
+.md > .wrap ul li:first-child{
+     height: 200px;
+     width: 252px;
+     box-shadow: 0px 5px 20px rgb(0, 0, 0); 
+     overflow: hidden;
+}
+.md > .wrap a img{
+     width: 100%; 
+     transition: ease-in-out 0.2s;
+}
+.md > .wrap a img:hover{
+    transform: scale(1.04);
+    transition: ease-in-out 0.2s;
+}
+
+/* 이하 md 상품 글자설정 */
+.md > .wrap a{
+     color: white;
+     font-size: 1.6rem;
+}
+.md > .wrap ul li:nth-child(2){
+     font-weight: 800;
+}
+.md > .wrap ul li:first-child{
+     margin-bottom: 20px;
+}
+.md > .wrap a .m_eng{
+     font-size: 1.2rem;
+     font-weight: 500;
+}
+.md > .wrap a ul li{
+     margin-bottom: 10px;
+}
+.md > .wrap a .price_ori{
+     font-size: 1.4rem;
+     font-weight: 800;
+     color: #707070;
+     margin-left: 5px;
+     text-decoration:line-through;
+     background-color: rgb(255, 217, 0);
+}
+
+/* md end */
+.yt div{
+     width: 100%;
+     padding-bottom: 56.25%;
+     position:relative;
+     overflow: hidden;
+     }
+     .yt iframe{
+     width: 100%;
+     height: 100%;
+     position:absolute;
+     top:0;
+     left:0;
+     }
+
+/* 이하 ca 상품 */
+
+section.ca{
+     margin-top: 30px;
+     width: 100%;
+     height: 1200px;
+     background: url('../img/member_back.png') center center / cover no-repeat;     
+     display: inline-block;
+     position:relative;
+     z-index: 1;
+}
+.ca_title {
+     text-align: center;
+}
+.ca_title img{
+     margin: 130px 0 80px 0;
+}
+
+
+/* 이하카드 */
+.card_flex_wrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.scene .row1{
+     width: 1200px;
+     display: flex;
+     justify-content: space-between;
+     /* perspective: 1800px; */
+     transition: ease-in-out .4s;
+}
+.scene .row1 .card:hover {
+     z-index: 200;
+     transition: ease-in-out .4s;
+}
+
+.scene .row2{
+     width: 900px;
+     display: flex;
+     justify-content: space-between;
+     perspective: 1800px;
+     height: 10px;
+     margin: 0 auto;
+}
+.scene .row1 .card,
+.scene .row2 .card{
+     position: relative;
+     width: 280px;
+     height: 428px;
+     cursor: pointer;
+     transition: ease-in-out .4s;
+     transform-style: preserve-3d;
+     /* z-index: 0; */
+}
+.scene .row1 .card .card__face,
+.scene .row2 .card .card__face{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 280px;
+     height: 428px;
+     z-index: 0;
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+     transition: ease-in-out .4s;
+     text-align: center;
+}
+/* 두번째줄 겹치는 위치 */
+.row2 .card{
+     bottom: 230px;
+}
+/* 카드 dropshadow */
+.scene .row1 .card .card__face img,
+.scene .row2 .card .card__face img{
+     box-shadow: 0px 0px 10px rgb(0, 0, 0); 
+     border-radius: 4%;
+     width: 280px;
+     height: 428px; 
+}
+.scene .row1 .card:hover,
+.scene .row2 .card:hover{
+     position: relative;
+     /* z-index: 0; */
+     transform: rotateY(0.5turn);     
+}
+.scene .row1 .card .card__face--back,
+.scene .row2 .card .card__face--back{
+     position: relative;
+     box-sizing: border-box;
+     transform: rotateY(0.5turn) scale(1.1);
+     /* z-index: 0; */
+}
+
+.row1,
+.row2{
+     position: relative;
+     /* z-index: 0; */
+}
+
+
+
+/* ca end */
+
+/* 24시간 팝업 *//* 24시간 팝업 */
+.pop {
+     display: none;
+}
+/* 검은필터 */
+.pop:before {
+     display: block;
+     content: "";
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     z-index: 5000;
+}
+/* 팝업사진만 쉐도우 */
+.cont{
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+}
+.pop .layerBox {
+     z-index: 5001;
+     max-width: 700px;
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: 6px;
+}
+.pop img{
+     width: 100%;
+     height: 100%;
+     display: block;
+}
+/* X버튼 */
+
+
+#close {
+     font-size: 4rem;
+     display: inline-block;
+     position: absolute;
+     right: 0;
+     line-height: 40px;
+     width: 40px;
+     text-align: center;
+     cursor: pointer;
+     
+
+}
+/* 하루동안글자랑 체크박스 */
+.pop .layerBox .btnTodayHide a {
+     font-size: 1.5rem;
+     margin-top: 10px;
+     color:#fff;
+}
+
+.btnTodayHide {
+     display: inline-block;
+     width: 100%;
+}
+
+label {
+     color:#fff;
+     cursor: pointer;
+     display: inline-block;
+     padding-left: 3px;
+}
+
+input {
+     cursor: pointer;
+}
+
+/* 닫는버튼 */
+#close a {
+     color:#fff;
+     text-decoration: none;
+}
+
+.close {
+     display: inline-block;
+     
+}
+
+header nav .gnb > li{
+     z-index: 0;
+}
+/* commond에도 있는 애인데, 처음 notice 검은 필터때문에
+z-index만 0으로 바꿔줌 */
+
+/* 24시간 팝업 끝 *//* 24시간 팝업 끝 */
