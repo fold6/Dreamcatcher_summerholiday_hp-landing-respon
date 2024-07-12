@@ -1,7 +1,7 @@
 # Dreamcatcher_summerholiday 홈페이지 (Fan made)
 드림캐쳐의 SummerHoliday 앨범의 컨셉을 담아낸 홈페이지 (디자인 및 퍼블리싱)<br>
 (The website that contains the concept of Dreamcatcher's Summer Holiday album)<br><br>
-📌[홈페이지 바로가기](https://fold6.github.io/dreamcatcher_summerholiday_hp/)<br>
+📌[홈페이지 바로가기](https://fold6.github.io/Dreamcatcher_summerholiday_hp-landing-respon/index.html)<br>
 
 <br>
 <br>
